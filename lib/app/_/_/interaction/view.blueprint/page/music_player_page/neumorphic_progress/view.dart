@@ -9,10 +9,8 @@ class NeumorphicProgressView extends StatefulWidget {
   NeumorphicProgressView({
     super.key,
     required this.progress,
-    required this.width,
   });
 
-  final double width;
   final double progress;
 
   @override
@@ -24,7 +22,6 @@ class NeumorphicProgressViewState extends State<NeumorphicProgressView>
   @override
   Widget build(BuildContext context) {
     assert(0.0 <= widget.progress && widget.progress <= 1.0);
-    final width = MediaQuery.of(context).size.width;
 
 
     return Stack(
@@ -33,7 +30,6 @@ class NeumorphicProgressViewState extends State<NeumorphicProgressView>
         Positioned(
           top: 30,
           child: Container(
-            width: width,
             height: 10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
@@ -44,7 +40,7 @@ class NeumorphicProgressViewState extends State<NeumorphicProgressView>
         Positioned(
           top: 30,
           child: Container(
-            width: width * widget.progress,
+            width: 200 * widget.progress,
             height: 10,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
@@ -60,7 +56,7 @@ class NeumorphicProgressViewState extends State<NeumorphicProgressView>
           ),
         ),
         Positioned(
-          left: width * widget.progress - 25,
+          left: 200 *  widget.progress - 25,
           top: 18,
           height: 35,
           child: NeumorphicCircleView(

@@ -19,6 +19,7 @@ class NewViewState extends State<NewView> with StateMother {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 33, 36, 40),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -34,7 +35,7 @@ class NewViewState extends State<NewView> with StateMother {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 80),
+            Gap(80),
             GestureDetector(
               behavior: HitTestBehavior.translucent,
               onTap: () {
@@ -86,7 +87,7 @@ class NewViewState extends State<NewView> with StateMother {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
+            Gap(40),
             Stack(
               children: <Widget>[
                 Align(
@@ -94,8 +95,8 @@ class NewViewState extends State<NewView> with StateMother {
                   child: NeumorphicCircleView(
                     borderWidth: 24,
                     borderColor: Color.fromARGB(255, 41, 41, 41),
-                    height: MediaQuery.of(context).size.width * 0.69,
-                    width: MediaQuery.of(context).size.width * 0.69,
+                    height: 300,
+                    width: 300,
                     child: Image.asset(
                       'assets/view/music_player_page/music_disk.webp',
                       fit: BoxFit.cover,
@@ -104,7 +105,7 @@ class NewViewState extends State<NewView> with StateMother {
                 ),
               ],
             ),
-            const SizedBox(height: 40),
+            Gap(40),
             Align(
               alignment: Alignment.bottomCenter,
               child: Container(
@@ -139,7 +140,7 @@ class NewViewState extends State<NewView> with StateMother {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
+            Gap(20),
             Stack(
               children: <Widget>[
                 Align(
@@ -163,7 +164,6 @@ class NewViewState extends State<NewView> with StateMother {
                   alignment: Alignment.bottomCenter,
                   child: NeumorphicProgressView(
                     progress: 0.5,
-                    width: 0.8.sw,
                   ),
                 ),
                 Align(
@@ -185,7 +185,7 @@ class NewViewState extends State<NewView> with StateMother {
                 ),
               ],
             ),
-            const SizedBox(height: 40),
+            Spacer(),
             Stack(
               children: <Widget>[
                 Align(
@@ -228,6 +228,7 @@ class NewViewState extends State<NewView> with StateMother {
                 ),
               ],
             ).padding(horizontal: 40),
+            Gap(20),
           ],
         ),
       ),
