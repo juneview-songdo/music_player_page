@@ -1,7 +1,7 @@
 name: music_player_page
-description: "Description here"
+description: "music player page by june"
 #publish_to: 'none'
-#repository: https://github.com/melodysdreamj/juneflow
+repository: https://github.com/juneview-songdo/music_player_page
 
 version: 1.0.0+1
 
